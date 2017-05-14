@@ -1,0 +1,639 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* ===================
+    ALL: Color Theme
+   =================== */
+
+.header-container,
+.footer-container {
+    background: #000000;
+}
+
+.title {
+    color: white;
+}
+
+.nav-container {
+    background: #e3e9f8;
+}
+
+nav a {
+    color: #232323;
+}
+
+.block-a {
+    background-color: black;
+}
+
+.block-b {
+    background-color: #e3e9f8;
+}
+.block-b p {
+    color: #232323;
+}
+
+.carousel {
+    background-color: #232323;
+    color: #232323;
+}
+
+.carousel-item {
+    background-color: #FFF;
+}
+.carousel-item-party {
+    background-color: #660000;
+    color: #efeff8;
+}
+.carousel-item-imgonly {
+    background: none;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main article h1 {
+    font-size: 2em;
+}
+
+.footer-container footer {
+    color: white;
+    /*padding: 20px 0;*/
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom fonts
+   ========================================================================== */
+
+@font-face {
+    font-family: "Lucida Calligraphy";
+    src: url("../fonts/lucidaca.ttf") format("truetype");
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+.title {
+    width: 100%;
+    text-align: center;
+}
+
+.nav-container {
+    height: 40px;
+    font-family: "Lucida Calligraphy", Verdana, Tahoma;
+}
+
+.content-block {
+    width: 100%;
+    height: 600px;
+    text-align: center;
+}
+
+.container {
+    height: 100%;
+    position: relative;
+}
+
+.block-b {
+    height: 100px;
+}
+.block-b p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.block-c {
+    height: 300px;
+}
+
+.block-d {
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 660px;
+    -webkit-perspective: 500px;
+    perspective: 500px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    font-size: 1.3em;
+}
+.carousel-item {
+    display: none;
+    width: 700px;
+    height: 600px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    font-family: Georgia, Times New Roman, Times, serif;
+    font-style: italic;
+}
+.carousel-item-imgonly {
+}
+.carousel-text, 
+.carousel-img {
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.carousel-text {
+    width: 60%;
+    float: left;
+}
+.carousel-img {
+    width: 40%;
+    float: right;
+}
+.carousel-item-imgonly .carousel-img {
+    width: 450px;
+    float: none;
+    margin: 0 auto;
+    padding: 0;
+}
+.carousel-imgtext {
+    height: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(35,35,35,0.6);
+    display: table;
+    color: white;
+}
+.top-text {
+    top: 0;
+}
+.bottom-text {
+    bottom: 0;
+}
+.carousel-imgtext span {
+    display: table-cell;
+    vertical-align: middle;
+}
+.carousel-text h2 {
+    margin: 10px 0;
+    height: 30px;
+}
+.carousel-text div {
+    margin: 10px 0;
+    height: 250px;
+    padding: 0;
+    display: table;
+}
+.carousel-text p {
+    display: table-cell;
+    vertical-align: middle;
+    overflow-wrap: break-word;
+}
+.carousel-text span {
+}
+.carousel-text a {
+    margin: 20px 0;
+    height: 30px;
+}
+.carousel-img {
+    width: 40%;
+    height: 100%;
+    float: right;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.block-e {
+    height: 400px;
+}
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+
+.footer-container {
+    height: 300px;
+}
+
+.address {
+    text-align: center;
+    font-family: Georgia, Times New Roman, Times, serif;
+    font-style: italic;
+}
+
+
+/* ==========================================================================
+   Author's images
+   ========================================================================== */
+.slide {
+    height: 100%;
+}
+
+.apple-slide {
+    background-image: url("../img/apple.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 900px;
+    margin: 0 auto;
+}
+
+.club-parallax-slide {
+    background-image: url("../img/club-b.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 100%;
+}
+
+.carousel-drinks {
+    background-image: url("../img/drinks.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
+
+.carousel-party {
+    background-image: url("../img/party.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
+.carousel-nightclub {
+    background-image: url("../img/nightclub-event.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 100%;
+    display: block;
+}
+.carousel-folder-a {
+    background-image: url("../img/folder-a.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 100%;
+    display: block;
+}
+.carousel-folder-b {
+    background-image: url("../img/folder-b.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 100%;
+    display: block;
+}
+.carousel-folder-c {
+    background-image: url("../img/folder-c.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 100%;
+    display: block;
+}
+.influence-img01 {
+    background-image: url("../img/nightclub-event.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+.influence-b {
+    background-image: url("../img/influence-b.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    width: 900px;
+}
+.influence-c {
+    background-image: url("../img/influence-c.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    width: 800px;
+}
+.influence-d {
+    background-image: url("../img/influence-d.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    width: 900px;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+    /* ====================
+        INTERMEDIATE: Menu
+       ==================== */
+
+    nav a a {
+        float: left;
+        width: 27%;
+        margin: 0 1.7%;
+        padding: 8px 2%;
+        margin-bottom: 0;
+    }
+
+    nav a {
+        float: left;
+        width: auto;
+        margin: 0;
+        padding: 8px 20px;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+    /* ========================
+        INTERMEDIATE: IE Fixes
+       ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* ====================
+        WIDE: CSS3 Effects
+       ==================== */
+
+    .header-container {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+        -moz-box-shadow: 0 5px 10px #aaa;
+        box-shadow: 0 5px 10px #aaa;
+    }
+
+    /* ============
+        WIDE: Menu
+       ============ */
+
+    .title {
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: auto;
+    }
+
+    /* ============
+        WIDE: Main
+       ============ */
+
+    .block-d section {
+        float: left;
+        width: 57%;
+    }
+
+    .block-d aside {
+        float: right;
+        width: 28%;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
+    /* ===============
+        Maximal Width
+       =============== */
+
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
