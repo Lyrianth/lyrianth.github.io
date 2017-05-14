@@ -7,19 +7,20 @@ function parallax() {
     window.onload = function () {
         var windowYOffset = window.pageYOffset - 400;
         var elBackgroundPos = "50% " + (windowYOffset * speed) + "px";
-
-        parallax.style.backgroundPosition = elBackgroundPos;
+        if (parallax !== undefined)
+            parallax.style.backgroundPosition = elBackgroundPos;
     };
     window.onscroll = function () {
         var windowYOffset = window.pageYOffset - 400;
         var elBackgroundPos = "50% " + (windowYOffset * speed) + "px";
-
-        parallax.style.backgroundPosition = elBackgroundPos;
+        if (parallax !== undefined)
+            parallax.style.backgroundPosition = elBackgroundPos;
     };
 }
 
 $(document).ready(function () {
     $('.carousel').carousel();
+    $('.slider').slider();
 });
 
 function initMap() {
@@ -45,6 +46,6 @@ function initMap() {
  * @returns A number in the range [min, max]
  * @type Number
  */
-Number.prototype.clamp = function(min, max) {
-  return Math.min(Math.max(this, min), max);
+Number.prototype.clamp = function (min, max) {
+    return Math.min(Math.max(this, min), max);
 };
