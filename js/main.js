@@ -21,6 +21,7 @@ function parallax() {
 $(document).ready(function () {
     $('.carousel').carousel();
     $('.slider').slider();
+    $('.parallax').parallax();
 });
 
 function initMap() {
