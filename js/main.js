@@ -22,9 +22,23 @@ $(document).ready(function () {
     $('.carousel').carousel();
     $('.slider').slider();
     $('.parallax').parallax();
+    fixedBar();
 });
 
 function initMap() {
+    var uluru = {lat: -23.60874, lng: -46.68876};
+    var map = new google.maps.Map(document.getElementById('footer-map'), {
+        scrollwheel: false,
+        zoom: 16,
+        center: uluru
+    });
+    var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+    });
+}
+
+function initMapLocal() {
     var uluru = {lat: -23.60874, lng: -46.68876};
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
@@ -33,6 +47,19 @@ function initMap() {
     var marker = new google.maps.Marker({
         position: uluru,
         map: map
+    });
+}
+
+function fixedBar() {
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 150) {
+            $('.nav-container').addClass('navbar-fixed');
+            $('.header-container').addClass('height-adjuster');
+        }
+        if ($(window).scrollTop() <= 150) {
+            $('.nav-container').removeClass('navbar-fixed');
+            $('.header-container').removeClass('height-adjuster');
+        }
     });
 }
 

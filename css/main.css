@@ -5,6 +5,10 @@ html {
     font-size: 1em;
     line-height: 1.4;
 }
+html, body {
+    width: 100%;
+    height: 100%;
+}
 
 ::-moz-selection {
     background: #b3d4fc;
@@ -70,8 +74,23 @@ body {
    =================== */
 
 .header-container,
+.nav-container {
+    /*background: #180000;*/
+    /*background: #1e2c3a;*/
+}
+.header-container {
+    background: #222;
+    background: linear-gradient(rgba(34, 34, 34, 1), black)
+}
+.nav-container {
+    background: #CCC;
+    background: linear-gradient(rgba(237, 243, 255, 1), rgba(227, 233, 248, 1));
+    border: 1px solid;
+    border-color: #222 transparent #222 transparent;
+}
 .footer-container {
-    background: #000000;
+    background: black;
+    background: linear-gradient(rgba(34, 34, 34, 1), black)
 }
 
 .title {
@@ -79,26 +98,33 @@ body {
 }
 
 .nav-container {
-    background: #e3e9f8;
+    /*    background: linear-gradient(black, rgba(227, 233, 248, 1));*/
+    /*background: linear-gradient(#180000, black 20%);*/
+    /*background: #000;*/
 }
 
 nav a {
-    color: #232323;
+    color: #333;
+}
+
+nav a:hover {
+    color: #C33;
+}
+
+.block-b,
+.block-d,
+.block-e {
+    background: #DDE;
+}
+.block-b p, .block-e {
+    color: #333;
 }
 
 .block-a {
     background-color: black;
 }
 
-.block-b {
-    background-color: #e3e9f8;
-}
-.block-b p {
-    color: #232323;
-}
-
 .carousel {
-    background-color: #232323;
     color: #232323;
 }
 
@@ -115,7 +141,19 @@ nav a {
 
 .gallery {
     background-color: #232323;
+    background-color: #000;
+    color: #EEE;
 }
+
+.triangle {
+    border-color: #232323 transparent transparent transparent;
+}
+
+.about-us {
+    background-color: #000;
+    color: #CCC
+}
+
 
 /* ==============
     MOBILE: Menu
@@ -139,11 +177,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #990000;
-}
-
-nav a:hover {
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 
 /* ==============
@@ -154,7 +188,7 @@ nav a:hover {
     font-size: 2em;
 }
 
-.footer-container footer {
+footer {
     color: white;
     /*padding: 20px 0;*/
 }
@@ -180,7 +214,25 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+.body-wrapper {
+    min-height: 100%;
+    position: relative;
+}
+.main-container {
+    padding-bottom: 680px;
+}
 
+
+.header-container {
+    height: 150px;
+    text-align: center;
+}
+.header-container.height-adjuster {
+    height: 190px;
+}
+.title-logo {
+    height: 150px;
+}
 
 .title {
     width: 100%;
@@ -189,7 +241,23 @@ nav a:hover {
 
 .nav-container {
     height: 40px;
+    text-align: right;
     font-family: "Lucida Calligraphy", Verdana, Tahoma;
+}
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+nav {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    transition: width .8s ease;
+}
+.navbar-fixed nav {
+    width: 100%;
 }
 
 .content-block {
@@ -241,15 +309,23 @@ ul:not(.browser-default) li {
 }
 
 .block-b {
-    height: 100px;
+    height: 80px;
+    display: table;
 }
 .block-b p {
+    height: 80px;
     margin: 0;
-    padding: 10px 0;
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: "Lucida Calligraphy", Verdana, Tahoma;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .block-c {
-    height: 300px;
+    height: 400px;
 }
 
 .parallax-container {
@@ -378,18 +454,26 @@ ul:not(.browser-default) li {
 }
 
 .block-e {
+    display: none;
     height: 400px;
 }
-#map {
+.map {
     height: 100%;
     width: 100%;
 }
 
-.gallery {
+.gallery .video-block {
+    text-align: center;
+    padding: 10px;
+}
+.gallery .video-block iframe {
+    border: none;
+}
+.gallery .content-block {
     padding: 20px 0;
     height: auto;
 }
-.gallery a {
+.gallery .content-block a {
     display: inline-block;
     height: 160px;
     margin: 10px;
@@ -399,14 +483,62 @@ ul:not(.browser-default) li {
     height: 700px;
 }
 
-.footer-container {
-    height: 300px;
-}
-
 .address {
     text-align: center;
     font-family: Georgia, Times New Roman, Times, serif;
     font-style: italic;
+}
+
+.footer-container {
+    height: 680px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.wrapper {
+    height: 100%;
+}
+.footer-logo {
+    display: table;
+}
+.footer-center {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.footer-map {
+    width: calc(100% - 40px);
+    height: 260px;
+    margin: 20px;
+}
+
+
+.triangle {
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+}
+
+.about-us {
+    font-family: "Lucida Calligraphy", Verdana, Tahoma;
+}
+.about-us article {
+    width: 800px;
+    height: auto;
+    padding: 5px 20px;
+    margin: 0 auto;
+    text-align: left;
+}
+.about-us header p {
+    text-indent: 1em;
+}
+.about-us h1, .about-us h2, .about-us h3 {
+    font-weight: bold;
+    padding-left: 50px;
 }
 
 
@@ -480,6 +612,25 @@ ul:not(.browser-default) li {
     height: 100%;
     display: block;
 }
+
+.carousel-event001 {
+    background-image: url("../img/event001.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 100%;
+    display: block;
+}
+
+.carousel-event002 {
+    background-image: url("../img/event002.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 100%;
+    display: block;
+}
+
 .influence-img01 {
     background-image: url("../img/nightclub-event.jpg");
     background-size: auto;
@@ -546,7 +697,7 @@ ul:not(.browser-default) li {
        ======================== */
 
     nav ul li {
-        display: inline;
+        display: inline-block;
     }
 
     .oldie nav a {
@@ -554,17 +705,14 @@ ul:not(.browser-default) li {
     }
 }
 
+@media only screen and (min-width: 750px) {
+}
+
 @media only screen and (min-width: 768px) {
 
     /* ====================
         WIDE: CSS3 Effects
        ==================== */
-
-    .header-container {
-        -webkit-box-shadow: 0 5px 10px #aaa;
-        -moz-box-shadow: 0 5px 10px #aaa;
-        box-shadow: 0 5px 10px #aaa;
-    }
 
     /* ============
         WIDE: Menu
@@ -575,8 +723,8 @@ ul:not(.browser-default) li {
     }
 
     nav {
-        float: right;
-        width: auto;
+        /*float: right;*/
+        width: 710px;
     }
 
     /* ============
@@ -600,9 +748,18 @@ ul:not(.browser-default) li {
         Maximal Width
        =============== */
 
-    .wrapper {
+    footer .wrapper {
         width: 1026px; /* 1140px - 10% for margins */
         margin: 0 auto;
+    }
+    .main-container {
+        padding-bottom: 300px;
+    }
+    .footer-container {
+        height: 300px;
+    }
+    .footer-logo {
+        height: 100%;
     }
 }
 
