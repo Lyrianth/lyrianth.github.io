@@ -400,7 +400,7 @@ ul:not(.browser-default) li {
 }
 
 .block-b {
-    height: 70px;
+    height: 50px;
     display: table;
 }
 .block-b p {
@@ -410,17 +410,18 @@ ul:not(.browser-default) li {
     display: table-cell;
     vertical-align: middle;
     font-family: "Lucida Calligraphy", Verdana, Tahoma;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold;
     font-style: italic;
 }
 
 .block-divisor {
-    height: 30px;
+    height: 15px;
 }
 
 .block-c {
-    height: 200px;
+    height: 120px;
+    transition: height .5s ease;
 }
 
 .parallax-container {
@@ -437,6 +438,7 @@ ul:not(.browser-default) li {
     z-index: -1;
 }
 .parallax img {
+    width: 100%;
     display: none;
     position: absolute;
     left: 50%;
@@ -656,7 +658,7 @@ ul:not(.browser-default) li {
 .contato {
     font-family: "Lucida Calligraphy", Verdana, Tahoma;
     max-width: 800px;
-    padding: 25px;
+    padding: 40px 10px;
     padding-top: 40px;
     margin: 0 auto;
 }
@@ -678,13 +680,13 @@ ul:not(.browser-default) li {
     display: inline-block;
     width: 100px;
     color: inherit;
-    text-align: right;
-    padding-right: 5px;
+    text-align: center;
 }
 .contato .w3-input, .contato .w3-select {
     display: inline-block;
-    max-width: 630px;
+    width: 95%;
     border-color: #CCC;
+    margin-left: 0px;
     /*    padding: 5px;*/
 }
 .contato .w3-select {
@@ -910,15 +912,16 @@ ul:not(.browser-default) li {
     .block-a, .slider .slides li img {
         height: 500px;
     }
+    
     .block-b {
-        height: 100px;
+        height: 80px;
     }
     .block-b p {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     .block-c {
-        height: 400px;
+        height: 220px;
     }
 
     .block-d section {
@@ -954,6 +957,13 @@ ul:not(.browser-default) li {
         padding-left: 50px;
         text-align: left;
     }
+    .contato .w3-input, .contato .w3-select {
+        width: calc(100% - 120px);
+        margin-left: 5px;
+    }
+    .contato .w3-label {
+        text-align: right;
+    }
 }
 @media only screen and (min-width: 840px) {
 
@@ -968,6 +978,10 @@ ul:not(.browser-default) li {
     /* ===============
         Maximal Width
        =============== */
+
+    .block-c {
+        height: 300px;
+    }
 
     footer .wrapper {
         width: 1020px; /* 1140px - 10% for margins */
