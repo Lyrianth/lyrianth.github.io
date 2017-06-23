@@ -46,10 +46,45 @@
             </header>
 
             <div class="main-container">
-                <div class="main clearfix">
-                    <div class="content-block local">
-                        <div id="map" class="map"></div>
-                    </div>
+                <div class="main clearfix contato">
+                    <section class="content-block">
+
+                        <form method="post" id="contact-form">
+                            <h2 class="bold">Envie-nos um email!</h2>
+                            <p>
+                                <label class="w3-label bold">Assunto</label>
+                                <select class="w3-select">
+                                    <option value="reserva">Reserva</option>
+                                    <option value="duvidas">Dúvidas</option>
+                                    <option value="sugestoes">Sugestões</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label class="w3-label bold">Nome</label>
+                                <input class="w3-input w3-border required" type="text" name="name" id="name">
+                            </p>
+                            <p>
+                                <label class="w3-label bold">Email</label>
+                                <input class="w3-input w3-border required" type="text" name="email" id="email">
+                            </p>
+
+                            <p>
+                                <label class="w3-label bold">Telefone</label>
+                                <input class="w3-input w3-border required phone" type="tel" name="phone" id="phone" placeholder="(99) 99999999">
+                            </p>
+
+                            <p>
+                                <label class="w3-label bold textarea-label">Mensagem</label>
+                                <textarea class="w3-input w3-border required" rows="5" name="msg" id="msg" maxlength="1000"></textarea>
+                            </p>
+
+                            <p style="margin-bottom: 0;">
+                                <button type="submit" class="w3-btn bold">Enviar</button>
+                                <label id="mail-msg" style="margin-left: 1em;" class="w3-label bold"></label>
+                            </p>
+                        </form>
+
+                    </section>
 
                 </div> <!-- #main -->
             </div> <!-- #main-container -->
@@ -85,7 +120,7 @@
 
         <script src="js/main.js"></script>
         <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJkwS70bRlKpQvL-aFJ8l2m35LF-V62YM&callback=initMapLocal">
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJkwS70bRlKpQvL-aFJ8l2m35LF-V62YM&callback=initMap">
         </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
