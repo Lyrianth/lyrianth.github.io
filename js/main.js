@@ -52,13 +52,13 @@ function initMapLocal() {
 
 function fixedBar() {
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 150) {
+        if ($(window).scrollTop() > 70) {
             $('.nav-container').addClass('navbar-fixed');
             $('.header-container').addClass('height-adjuster');
 //            $('.main-container').addClass('height-adjuster');
             $('.mini-logo').removeClass('transp');
         }
-        if ($(window).scrollTop() <= 150) {
+        if ($(window).scrollTop() <= 70) {
             $('.nav-container').removeClass('navbar-fixed');
             $('.header-container').removeClass('height-adjuster');
 //            $('.main-container').removeClass('height-adjuster');

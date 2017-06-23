@@ -84,7 +84,8 @@ html {
 }
 .header-container {
     background: #222;
-    background: linear-gradient(rgba(34, 34, 34, 1), black)
+    background: linear-gradient(rgba(34, 34, 34, 1), black);
+    background: #EDF3FF;
 }
 .nav-container {
     background: #CCC;
@@ -253,17 +254,22 @@ footer {
 
 
 .header-container {
-    height: 150px;
+    height: 70px;
     text-align: center;
 }
 .header-container.height-adjuster {
-    height: 190px;
+    height: 110px;
 }
 .main-container.height-adjuster {
 }
 .title-logo {
-    height: 150px;
-    transition: all .8s ease;
+    height: 80px; 
+    left: 5% !important; 
+    top: -60px;
+    transition: all .3s ease;
+}
+.navbar-fixed .title-logo {
+    opacity: 0;
 }
 
 .title {
