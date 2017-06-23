@@ -246,10 +246,9 @@ footer {
     position: relative;
 }
 .main-container {
-    padding-bottom: 680px;
+    padding-bottom: 620px;
     padding-top: 0px;
     margin-top: 0px;
-    transition: all .8s;
 }
 
 
@@ -264,8 +263,9 @@ footer {
 }
 .title-logo {
     height: 80px; 
+    position: absolute;
     left: 5% !important; 
-    top: -60px;
+    top: -70px;
     transition: all .3s ease;
 }
 .navbar-fixed .title-logo {
@@ -363,7 +363,7 @@ footer {
 }
 
 .block-a {
-    height: 500px;
+    height: 300px;
 }
 .slider {    
     position: relative;
@@ -385,7 +385,7 @@ footer {
     overflow: hidden;
 }
 .slider .slides li img {
-    height: 100%;
+    height: 300px;
     width: 100%;
     background-size: contain;
     background-position: center;
@@ -400,17 +400,17 @@ ul:not(.browser-default) li {
 }
 
 .block-b {
-    height: 100px;
+    height: 70px;
     display: table;
 }
 .block-b p {
-    line-height: 34px;
+    line-height: normal;
     margin: 0;
     padding: 0;
     display: table-cell;
     vertical-align: middle;
     font-family: "Lucida Calligraphy", Verdana, Tahoma;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
     font-style: italic;
 }
@@ -420,7 +420,7 @@ ul:not(.browser-default) li {
 }
 
 .block-c {
-    height: 400px;
+    height: 200px;
 }
 
 .parallax-container {
@@ -584,8 +584,12 @@ ul:not(.browser-default) li {
     font-style: italic;
 }
 
+.address p {
+    margin: 4px 0px;
+}
+
 .footer-container {
-    height: 680px;
+    height: 620px;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -595,11 +599,9 @@ ul:not(.browser-default) li {
     height: 100%;
 }
 .footer-logo {
-    display: table;
+    padding: 10px 0;
 }
 .footer-center {
-    display: table-cell;
-    vertical-align: middle;
     text-align: center;
 }
 
@@ -674,7 +676,7 @@ ul:not(.browser-default) li {
     display: inline-block;
     width: 630px;
     border-color: #CCC;
-/*    padding: 5px;*/
+    /*    padding: 5px;*/
 }
 .contato .w3-select {
     padding: 5px 4px;
@@ -837,7 +839,7 @@ ul:not(.browser-default) li {
         float: left;
         width: auto;
         margin: 0;
-        padding: 8px 20px;
+        padding: 8px 10px;
     }
 
     nav li:first-child a {
@@ -861,9 +863,6 @@ ul:not(.browser-default) li {
     }
 }
 
-@media only screen and (min-width: 750px) {
-}
-
 @media only screen and (min-width: 768px) {
 
     /* ====================
@@ -882,15 +881,30 @@ ul:not(.browser-default) li {
         /*float: right;*/
         width: 100%;
     }
-
-    .title-logo {
-        position: absolute;
-        left: calc(50% - 230px);
+    .desk-nav {
+        display: block;
+    }
+    .bar-menu, .side-nav {
+        display: none !important;
     }
 
     /* ============
         WIDE: Main
        ============ */
+
+    .block-a, .slider .slides li img {
+        height: 500px;
+    }
+    .block-b {
+        height: 100px;
+    }
+    .block-b p {
+        font-size: 1.5em;
+    }
+    
+    .block-c {
+        height: 400px;
+    }
 
     .block-d section {
         float: left;
@@ -901,13 +915,26 @@ ul:not(.browser-default) li {
         float: right;
         width: 28%;
     }
+
+    footer .wrapper {
+        width: 680px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+    .main-container {
+        padding-bottom: 320px;
+    }
+    .footer-container {
+        height: 320px;
+    }
+    .w3-half {
+        width: 49.99999%;
+    }
 }
 @media only screen and (min-width: 840px) {
-    .desk-nav {
-        display: block;
-    }
-    .bar-menu, .side-nav {
-        display: none !important;
+
+    footer .wrapper {
+        width: 750px; /* 1140px - 10% for margins */
+        margin: 0 auto;
     }
 }
 
@@ -918,17 +945,8 @@ ul:not(.browser-default) li {
        =============== */
 
     footer .wrapper {
-        width: 1026px; /* 1140px - 10% for margins */
+        width: 1020px; /* 1140px - 10% for margins */
         margin: 0 auto;
-    }
-    .main-container {
-        padding-bottom: 300px;
-    }
-    .footer-container {
-        height: 300px;
-    }
-    .footer-logo {
-        height: 100%;
     }
 }
 
